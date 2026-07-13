@@ -1,23 +1,45 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NOIR — DROP 001</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-<body>
+body {
+    background: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    <main>
-        <img src="logo.png" class="logo" alt="NOIR Logo">
+main {
+    text-align: center;
+}
 
-        <h1>NOIR</h1>
-        <p>DROP 001</p>
+.logo {
+    width: 180px;
+    margin-bottom: 30px;
+}
 
-        <button>SHOP NOW</button>
-    </main>
+h1 {
+    font-size: 80px;
+    letter-spacing: 15px;
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+p {
+    font-size: 18px;
+    letter-spacing: 8px;
+    margin-top: 20px;
+    opacity: 0.7;
+}
+
+button {
+    margin-top: 40px;
+    background: white;
+    color: black;
+    border: none;
+    padding: 15px 40px;
+    letter-spacing: 3px;
+}
