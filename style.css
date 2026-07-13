@@ -101,18 +101,22 @@ button:hover {
     font-size: 40px;
     opacity: 0.8;
     transition: 0.5s ease;
-    animation: bounce 2s infinite;
+    animation: arrowMove 2s ease-in-out infinite;
 }
 
 
-@keyframes bounce {
+@keyframes arrowMove {
 
-    0%, 100% {
+    0% {
         transform: translateY(0);
     }
 
     50% {
         transform: translateY(15px);
+    }
+
+    100% {
+        transform: translateY(0);
     }
 
 }
