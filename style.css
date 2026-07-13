@@ -1,115 +1,34 @@
+/* =========================
+   RESET
+========================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
+/* =========================
+   BODY
+========================= */
+
 body {
     background: #000;
     color: #fff;
     font-family: Arial, sans-serif;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
+
 
 main {
     text-align: center;
 }
 
-.logo {
-    width: 50vw;
-    max-width: 600px;
-    min-width: 250px;
-    margin-bottom: 30px;
-}
 
-.collection-card {
-    height: 600px;
-    background: #111;
-    margin-bottom: 50px;
-}
+/* =========================
+   HERO SECTION
+========================= */
 
-
-
-
-
-/* NOIR Animations */
-
-.logo {
-    opacity: 0;
-    animation: fadeIn 3s ease forwards;
-}
-
-h1 {
-    opacity: 0;
-    animation: slideUp 3s ease 1.5s forwards;
-}
-
-p {
-    opacity: 0;
-    animation: slideUp 3s ease 2.5s forwards;
-}
-
-button {
-    opacity: 0;
-    animation: fadeIn 3s ease 3.5s forwards;
-    transition: 0.5s ease;
-    padding: 20px 60px;
-    front-size: 20px;
-    letter-spacing: 5px;
-    border-radius: 0;
-}
-
-button:hover {
-    transform: scale(1.05);
-    letter-spacing: 5px;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-        <section class="collections">
-
-    <div class="collection-card">
-        <img src="drop001.jpg" alt="DROP 001">
-        <div class="overlay">
-            <h2>DROP 001</h2>
-        </div>
-    </div>
-
-    <div class="collection-card">
-        <img src="summer.jpg" alt="SUMMER EDITION">
-        <div class="overlay">
-            <h2>SUMMER EDITION</h2>
-        </div>
-    </div>
-
-    <div class="collection-card">
-        <img src="limited.jpg" alt="LIMITED DROP">
-        <div class="overlay">
-            <h2>LIMITED DROP</h2>
-        </div>
-    </div>
-
-</section>
-    }
-}
 .hero {
     height: 100vh;
     display: flex;
@@ -118,20 +37,97 @@ button:hover {
     align-items: center;
     position: relative;
 }
+
+
+.logo {
+    width: 50vw;
+    max-width: 600px;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   COLLECTIONS
+========================= */
+
+.collection-card {
+    height: 600px;
+    background: #111;
+    margin-bottom: 50px;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+.logo {
+    opacity: 0;
+    animation: fadeIn 3s ease forwards;
+}
+
+
+p {
+    opacity: 0;
+    animation: slideUp 3s ease 2.5s forwards;
+}
+
+
+button {
+    opacity: 0;
+    animation: fadeIn 3s ease 3.5s forwards;
+    transition: 0.5s ease;
+    padding: 20px 60px;
+    font-size: 20px;
+    letter-spacing: 5px;
+    border-radius: 0;
+}
+
+
+button:hover {
+    transform: scale(1.05);
+    letter-spacing: 5px;
+}
+
+
+/* =========================
+   SCROLL ARROW
+========================= */
+
 .scroll-arrow {
     position: absolute;
     bottom: 40px;
 }
-.hero {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 1;
-    visibility: visible;
+
+
+/* =========================
+   KEYFRAMES
+========================= */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
 }
 
-.hero p {
-    opacity: 1;
+
+@keyframes slideUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
 }
