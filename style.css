@@ -98,8 +98,24 @@ button:hover {
 .scroll-arrow {
     position: absolute;
     bottom: 40px;
+    font-size: 40px;
+    opacity: 0.8;
+    transition: 0.5s ease;
+    animation: bounce 2s infinite;
 }
 
+
+@keyframes bounce {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(15px);
+    }
+
+}
 
 /* =========================
    KEYFRAMES
