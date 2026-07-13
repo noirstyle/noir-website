@@ -25,7 +25,11 @@ main {
     margin-bottom: 30px;
 }
 
-
+.collection-card {
+    height: 600px;
+    background: #111;
+    margin-bottom: 50px;
+}
 
 
 
