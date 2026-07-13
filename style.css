@@ -25,6 +25,58 @@ main {
     margin-bottom: 30px;
 }
 
+
+
+
+
+
+
+/* NOIR Animations */
+
+.logo {
+    animation: fadeIn 2s ease forwards;
+}
+
+h1 {
+    animation: slideUp 2s ease 0.5s forwards;
+    opacity: 0;
+}
+
+p {
+    animation: slideUp 2s ease 1s forwards;
+    opacity: 0;
+}
+
+button {
+    animation: fadeIn 2s ease 1.5s forwards;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    letter-spacing: 5px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 h1 {
     font-size: 80px;
     letter-spacing: 15px;
