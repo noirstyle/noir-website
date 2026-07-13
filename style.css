@@ -52,6 +52,10 @@ button {
     opacity: 0;
     animation: fadeIn 3s ease 3.5s forwards;
     transition: 0.5s ease;
+    padding: 20px 60px;
+    front-size: 20px;
+    letter-spacing: 5px;
+    border-radius: 0;
 }
 
 button:hover {
