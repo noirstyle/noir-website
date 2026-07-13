@@ -80,5 +80,29 @@ button:hover {
     to {
         opacity: 1;
         transform: translateY(0);
+        <section class="collections">
+
+    <div class="collection-card">
+        <img src="drop001.jpg" alt="DROP 001">
+        <div class="overlay">
+            <h2>DROP 001</h2>
+        </div>
+    </div>
+
+    <div class="collection-card">
+        <img src="summer.jpg" alt="SUMMER EDITION">
+        <div class="overlay">
+            <h2>SUMMER EDITION</h2>
+        </div>
+    </div>
+
+    <div class="collection-card">
+        <img src="limited.jpg" alt="LIMITED DROP">
+        <div class="overlay">
+            <h2>LIMITED DROP</h2>
+        </div>
+    </div>
+
+</section>
     }
 }
