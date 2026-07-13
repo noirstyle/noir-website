@@ -122,3 +122,16 @@ button:hover {
     position: absolute;
     bottom: 40px;
 }
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    visibility: visible;
+}
+
+.hero p {
+    opacity: 1;
+}
