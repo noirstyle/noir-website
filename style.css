@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOIR — DROP 001</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main>
+        <img src="logo.png" class="logo" alt="NOIR Logo">
+
+        <h1>NOIR</h1>
+        <p>DROP 001</p>
+
+        <button>SHOP NOW</button>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
