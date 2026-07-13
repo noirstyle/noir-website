@@ -99,15 +99,27 @@ button:hover {
     position: absolute;
     bottom: 40px;
     font-size: 40px;
-    opacity: 0.8;
-    transition: 0.5s ease;
-    animation: arrowMove 2s ease-in-out infinite;
+    opacity: 0;
+    animation: arrowFade 3s ease 1s forwards, arrowMove 2s ease-in-out 4s infinite;
+}
+
+
+@keyframes arrowFade {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.8;
+    }
+
 }
 
 
 @keyframes arrowMove {
 
-    0% {
+    0%, 100% {
         transform: translateY(0);
     }
 
@@ -115,12 +127,7 @@ button:hover {
         transform: translateY(15px);
     }
 
-    100% {
-        transform: translateY(0);
-    }
-
 }
-
 /* =========================
    KEYFRAMES
 ========================= */
