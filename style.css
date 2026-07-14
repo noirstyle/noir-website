@@ -17,152 +17,14 @@ body {
     background: #000;
     color: #fff;
     font-family: Arial, sans-serif;
+    overflow-x: hidden;
 }
-
 
 main {
     text-align: center;
 }
 
 
-/* =========================
-   HERO SECTION
-========================= */
-
-.hero {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-
-.logo {
-    width: 50vw;
-    max-width: 600px;
-    min-width: 250px;
-    margin-bottom: 30px;
-}
-
-
-/* =========================
-   COLLECTIONS
-========================= */
-
-.collection-card {
-    height: 600px;
-    background: #111;
-    margin-bottom: 50px;
-}
-
-
-/* =========================
-   ANIMATIONS
-========================= */
-
-.logo {
-    opacity: 0;
-    animation: fadeIn 3s ease forwards;
-}
-
-
-p {
-    opacity: 0;
-    animation: slideUp 3s ease 2.5s forwards;
-}
-
-
-button {
-    opacity: 0;
-    animation: fadeIn 3s ease 3.5s forwards;
-    transition: 0.5s ease;
-    padding: 20px 60px;
-    font-size: 20px;
-    letter-spacing: 5px;
-    border-radius: 0;
-}
-
-
-button:hover {
-    transform: scale(1.05);
-    letter-spacing: 5px;
-}
-
-
-/* =========================
-   SCROLL ARROW
-========================= */
-
-.scroll-arrow {
-    position: absolute;
-    bottom: 40px;
-    font-size: 40px;
-    opacity: 0;
-    animation: arrowFade 3s ease 1s forwards, arrowMove 2s ease-in-out 4s infinite;
-}
-
-
-@keyframes arrowFade {
-
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 0.8;
-    }
-
-}
-
-
-@keyframes arrowMove {
-
-    0%, 100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(15px);
-    }
-
-}
-/* =========================
-   KEYFRAMES
-========================= */
-
-@keyframes fadeIn {
-
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-
-}
-
-
-@keyframes slideUp {
-
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-}
-.collection-link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-}
 /* =========================
    NAVBAR
 ========================= */
@@ -192,6 +54,8 @@ button:hover {
     color: white;
     font-size: 28px;
     cursor: pointer;
+    opacity: 0;
+    animation: fadeIn 3s ease 3s forwards;
 }
 
 
@@ -206,10 +70,11 @@ button:hover {
     width: 320px;
     height: 100vh;
     background: #111;
-    padding-top: 120px;
-    transition: 0.4s ease;
     display: flex;
     flex-direction: column;
+    padding-top: 120px;
+    transition: .4s ease;
+    z-index: 999;
 }
 
 .account-menu.active {
@@ -218,9 +83,85 @@ button:hover {
 
 .account-menu a {
     color: white;
-   /* =========================
-   COLLECTION IMAGES
+    text-decoration: none;
+    padding: 20px 40px;
+    transition: .3s;
+}
+
+.account-menu a:hover {
+    background: #222;
+}
+
+
+/* =========================
+   HERO
 ========================= */
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.logo {
+    width: 50vw;
+    max-width: 600px;
+    min-width: 250px;
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: fadeIn 3s ease forwards;
+}
+
+.hero p {
+    font-size: 22px;
+    letter-spacing: 4px;
+    opacity: 0;
+    animation: slideUp 3s ease 2s forwards;
+}
+
+
+/* =========================
+   SCROLL ARROW
+========================= */
+
+.scroll-arrow {
+    position: absolute;
+    bottom: 40px;
+    font-size: 40px;
+    opacity: 0;
+    animation:
+        arrowFade 3s ease 1s forwards,
+        arrowMove 2s ease-in-out 4s infinite;
+}
+
+
+/* =========================
+   COLLECTIONS
+========================= */
+
+.collections {
+    width: 100%;
+    padding: 60px 0;
+}
+
+.collection-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.collection-card {
+    width: 90%;
+    max-width: 1200px;
+    height: 650px;
+    margin: 0 auto 50px;
+    position: relative;
+    overflow: hidden;
+    background: #111;
+}
 
 .collection-card img {
     width: 100%;
@@ -234,21 +175,92 @@ button:hover {
     inset: 0;
     display: flex;
     justify-content: center;
-    align-items: end;
-    padding-bottom: 30px;
-    background: linear-gradient(to top, rgba(0,0,0,.6), transparent);
+    align-items: flex-end;
+    padding-bottom: 40px;
+    background: linear-gradient(to top, rgba(0,0,0,.7), transparent);
 }
 
-.collection-card {
-    position: relative;
-    overflow: hidden;
-}
-    text-decoration: none;
-    padding: 20px 40px;
-    font-size: 18px;
-    transition: 0.3s;
+.overlay h2 {
+    letter-spacing: 8px;
+    font-size: 34px;
 }
 
-.account-menu a:hover {
-    background: #222;
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+@keyframes slideUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes arrowFade {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: .8;
+    }
+
+}
+
+@keyframes arrowMove {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(15px);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width:768px){
+
+.logo{
+    width:80%;
+}
+
+.collection-card{
+    height:350px;
+}
+
+.overlay h2{
+    font-size:24px;
+}
+
+.hero p{
+    font-size:16px;
+}
+
 }
