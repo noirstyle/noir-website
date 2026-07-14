@@ -2,10 +2,10 @@
    RESET
 ========================= */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 
@@ -13,15 +13,21 @@
    BODY
 ========================= */
 
-body {
-    background: #000;
-    color: #fff;
-    font-family: Arial, sans-serif;
-    overflow-x: hidden;
+body{
+    background:#000;
+    color:#fff;
+    font-family:Arial,sans-serif;
+    overflow-x:hidden;
 }
 
-main {
-    text-align: center;
+
+/* =========================
+   LINKS
+========================= */
+
+a{
+    color:inherit;
+    text-decoration:none;
 }
 
 
@@ -29,33 +35,29 @@ main {
    NAVBAR
 ========================= */
 
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 25px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:25px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
 }
 
-.nav-logo {
-    color: white;
-    text-decoration: none;
-    font-size: 24px;
-    letter-spacing: 6px;
+.nav-logo{
+    font-size:24px;
+    letter-spacing:6px;
 }
 
-.account-btn {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 28px;
-    cursor: pointer;
-    opacity: 0;
-    animation: fadeIn 3s ease 3s forwards;
+.account-btn{
+    background:none;
+    border:none;
+    color:white;
+    font-size:30px;
+    cursor:pointer;
 }
 
 
@@ -63,33 +65,31 @@ main {
    ACCOUNT MENU
 ========================= */
 
-.account-menu {
-    position: fixed;
-    top: 0;
-    right: -320px;
-    width: 320px;
-    height: 100vh;
-    background: #111;
-    display: flex;
-    flex-direction: column;
-    padding-top: 120px;
-    transition: .4s ease;
-    z-index: 999;
+.account-menu{
+    position:fixed;
+    right:-320px;
+    top:0;
+    width:320px;
+    height:100vh;
+    background:#111;
+    display:flex;
+    flex-direction:column;
+    padding-top:100px;
+    transition:.4s;
+    z-index:999;
 }
 
-.account-menu.active {
-    right: 0;
+.account-menu.active{
+    right:0;
 }
 
-.account-menu a {
-    color: white;
-    text-decoration: none;
-    padding: 20px 40px;
-    transition: .3s;
+.account-menu a{
+    padding:20px 35px;
+    transition:.3s;
 }
 
-.account-menu a:hover {
-    background: #222;
+.account-menu a:hover{
+    background:#222;
 }
 
 
@@ -97,29 +97,30 @@ main {
    HERO
 ========================= */
 
-.hero {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    position:relative;
 }
 
-.logo {
-    width: 50vw;
-    max-width: 600px;
-    min-width: 250px;
-    margin-bottom: 30px;
-    opacity: 0;
-    animation: fadeIn 3s ease forwards;
+.logo{
+    width:min(650px,60vw);
+    min-width:250px;
+
+    opacity:0;
+    animation:fadeIn 2.5s forwards;
 }
 
-.hero p {
-    font-size: 22px;
-    letter-spacing: 4px;
-    opacity: 0;
-    animation: slideUp 3s ease 2s forwards;
+.hero p{
+    margin-top:25px;
+    letter-spacing:5px;
+    font-size:22px;
+
+    opacity:0;
+    animation:slideUp 2.5s .8s forwards;
 }
 
 
@@ -127,14 +128,16 @@ main {
    SCROLL ARROW
 ========================= */
 
-.scroll-arrow {
-    position: absolute;
-    bottom: 40px;
-    font-size: 40px;
-    opacity: 0;
+.scroll-arrow{
+    position:absolute;
+    bottom:40px;
+    font-size:42px;
+
+    opacity:0;
+
     animation:
-        arrowFade 3s ease 1s forwards,
-        arrowMove 2s ease-in-out 4s infinite;
+    fadeIn 2s 1.5s forwards,
+    arrow 2s infinite 3.5s;
 }
 
 
@@ -142,46 +145,88 @@ main {
    COLLECTIONS
 ========================= */
 
-.collections {
-    width: 100%;
-    padding: 60px 0;
+.collections{
+    width:100%;
+    padding:80px 0;
 }
 
-.collection-link {
-    display: block;
-    text-decoration: none;
-    color: inherit;
+.collection-link{
+    display:block;
 }
 
-.collection-card {
-    width: 90%;
-    max-width: 1200px;
-    height: 650px;
-    margin: 50px auto;
-    background: red;
-    border: 5px solid yellow;
+.collection-card{
+
+    position:relative;
+
+    width:min(1300px,90%);
+    height:650px;
+
+    margin:0 auto 60px;
+
+    overflow:hidden;
+
+    background:#111;
+
 }
 
-.collection-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+.collection-card img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+    display:block;
+
 }
 
-.overlay {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    padding-bottom: 40px;
-    background: linear-gradient(to top, rgba(0,0,0,.7), transparent);
+.collection-card:hover img{
+
+    transform:scale(1.05);
+
 }
 
-.overlay h2 {
-    letter-spacing: 8px;
-    font-size: 34px;
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-end;
+
+    padding-bottom:45px;
+
+    background:linear-gradient(to top,rgba(0,0,0,.65),transparent);
+
+}
+
+.overlay h2{
+
+    letter-spacing:8px;
+
+    font-size:34px;
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    padding:50px 0;
+
+    text-align:center;
+
+    color:#888;
+
 }
 
 
@@ -189,52 +234,44 @@ main {
    ANIMATIONS
 ========================= */
 
-@keyframes fadeIn {
+@keyframes fadeIn{
 
-    from {
-        opacity: 0;
+    from{
+        opacity:0;
     }
 
-    to {
-        opacity: 1;
-    }
-
-}
-
-@keyframes slideUp {
-
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    to{
+        opacity:1;
     }
 
 }
 
-@keyframes arrowFade {
+@keyframes slideUp{
 
-    from {
-        opacity: 0;
+    from{
+        opacity:0;
+        transform:translateY(40px);
     }
 
-    to {
-        opacity: .8;
+    to{
+        opacity:1;
+        transform:translateY(0);
     }
 
 }
 
-@keyframes arrowMove {
+@keyframes arrow{
 
-    0%,100% {
-        transform: translateY(0);
+    0%{
+        transform:translateY(0);
     }
 
-    50% {
-        transform: translateY(15px);
+    50%{
+        transform:translateY(12px);
+    }
+
+    100%{
+        transform:translateY(0);
     }
 
 }
@@ -244,22 +281,37 @@ main {
    MOBILE
 ========================= */
 
-@media (max-width:768px){
+@media(max-width:768px){
 
 .logo{
+
     width:80%;
-}
 
-.collection-card{
-    height:350px;
-}
-
-.overlay h2{
-    font-size:24px;
 }
 
 .hero p{
+
     font-size:16px;
+
+}
+
+.collection-card{
+
+    height:330px;
+
+}
+
+.overlay h2{
+
+    font-size:22px;
+    letter-spacing:5px;
+
+}
+
+.navbar{
+
+    padding:20px;
+
 }
 
 }
