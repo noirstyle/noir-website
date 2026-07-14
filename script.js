@@ -14,3 +14,13 @@ window.addEventListener("scroll", () => {
     }
 
 });
+// =========================
+// ACCOUNT MENU
+// =========================
+
+const accountBtn = document.querySelector(".account-btn");
+const accountMenu = document.querySelector(".account-menu");
+
+accountBtn.addEventListener("click", () => {
+    accountMenu.classList.toggle("active");
+});
