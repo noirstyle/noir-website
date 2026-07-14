@@ -157,10 +157,9 @@ main {
     width: 90%;
     max-width: 1200px;
     height: 650px;
-    margin: 0 auto 50px;
-    position: relative;
-    overflow: hidden;
-    background: #111;
+    margin: 50px auto;
+    background: red;
+    border: 5px solid yellow;
 }
 
 .collection-card img {
