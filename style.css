@@ -158,3 +158,8 @@ button:hover {
     }
 
 }
+.collection-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
