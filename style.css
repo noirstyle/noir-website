@@ -163,3 +163,67 @@ button:hover {
     color: inherit;
     display: block;
 }
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.nav-logo {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    letter-spacing: 6px;
+}
+
+.account-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   ACCOUNT MENU
+========================= */
+
+.account-menu {
+    position: fixed;
+    top: 0;
+    right: -320px;
+    width: 320px;
+    height: 100vh;
+    background: #111;
+    padding-top: 120px;
+    transition: 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.account-menu.active {
+    right: 0;
+}
+
+.account-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 20px 40px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.account-menu a:hover {
+    background: #222;
+}
